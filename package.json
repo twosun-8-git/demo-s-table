@@ -1,0 +1,16 @@
+{
+  "name": "fcc-simulation",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "cd backend && mvn spring-boot:run",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "cd backend && mvn clean package -DskipTests",
+    "test:frontend": "npm run test --workspace=frontend",
+    "test:backend": "cd backend && mvn test"
+  }
+}
